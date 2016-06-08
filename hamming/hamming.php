@@ -10,8 +10,8 @@ function distance($a, $b)
     $arr1 = str_split($a);
     $arr2 = str_split($b);
 
-  $i=0;
   if (count($arr1) == count($arr2)) {
+    $i=0;
     foreach($arr1 as $key=>$value) {
       if ($value != $arr2[$key]){
         $i++;

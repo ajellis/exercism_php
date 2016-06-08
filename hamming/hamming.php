@@ -7,7 +7,19 @@
 
 function distance($a, $b)
 {
-    //
-    // YOUR CODE GOES HERE
-    //
+    $arr1 = str_split($a);
+    $arr2 = str_split($b);
+
+  $i=0;
+  if (count($arr1) == count($arr2)) {
+    foreach($arr1 as $key=>$value) {
+      if ($value != $arr2[$key]){
+        $i++;
+      }
+    }
+    return $i;
+  } else {
+    throw new InvalidArgumentException('DNA strands must be of equal length.');
+  }
+
 }
